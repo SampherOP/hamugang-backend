@@ -1,18 +1,16 @@
-const express = require('express');
+const express =NOWLEDGE = require('express');
 const cors = require('cors');
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-// Test route yeh check karne ke liye ki server chal raha hai ya nahi
+// Test route
 app.get('/', (req, res) => {
-    res.send("HAMUGANG Backend is Live!");
+    res.send("HAMUGANG Backend is Live on Vercel!");
 });
 
-// Yahan aap apna login/register ka code ya routes baad me add kar sakte hain
+// Yahan aapke login/register ke routes aayenge
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+// Vercel ke liye yeh zaroori hai:
+module.exports = app;
